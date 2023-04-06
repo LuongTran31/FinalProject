@@ -19,7 +19,8 @@ const Navbar = () =>{
     const currentUser = {
         id:1,
         username: "User1",
-        isSeller: true
+        isSeller: true,
+        isLogin: true
     }
     return (
         <div className={active || pathname !=="/" ?"navbar active": "navbar"}>
@@ -63,19 +64,19 @@ const Navbar = () =>{
            <>
            <hr/>
           <div className="menu">
-            <Link className="link menuLink" to="/">
+            <Link className="link menuLink" to="/products?cat=design">
               Phone
             </Link>
-            <Link className="link menuLink" to="/">
+            <Link className="link menuLink" to="/products?cat=design">
               Laptop
             </Link>
-            <Link className="link menuLink" to="/">
+            <Link className="link menuLink" to="/products?cat=design">
              Desktop
             </Link>
-            <Link className="link menuLink" to="/">
+            <Link className="link menuLink" to="/products?cat=design">
              Ipad
             </Link>
-            <Link className="link menuLink" to="/">
+            <Link className="link menuLink" to="/products?cat=design">
              Pc
             </Link>
            

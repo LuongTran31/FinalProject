@@ -16,9 +16,8 @@ const Home = () =>{
             <CatCard key={card.id} card={card} />
             ))}
             </Slide>
-       
-    
          </div>
+         
     )
 }
 
