@@ -2,6 +2,7 @@ import User from "../models/userModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken"
 import createError from "../utils/createError.js";
+
 export const register = async (req,res) =>{
     try {
     const hash = bcrypt.hashSync(req.body.password, 10);
@@ -40,8 +41,8 @@ export const login = async (req,res,next) => {
     }
 }
 
-export const logout = (req,res) =>{
-    res.clearCokkie("accessToken",{
+export const logout = async (req,res) =>{
+    res.clearCookie("accessToken",{
         sameSite: "none",
         secure: true,
     })
